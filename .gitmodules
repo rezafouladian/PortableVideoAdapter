@@ -1,0 +1,3 @@
+[submodule "external/picodvi"]
+	path = external/picodvi
+	url = https://github.com/Wren6991/PicoDVI
