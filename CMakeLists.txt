@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.12)
 
 set(PICO_BOARD_HEADER_DIRS ${CMAKE_CURRENT_LIST_DIR}/external)
 set(PICO_BOARD waveshare_rp2350_pizero)
+set(PICO_PLATFORM rp2350)
 
 include(external/picodvi/software/pico_sdk_import.cmake)
 
@@ -35,9 +36,6 @@ target_include_directories(PortableVideoAdapter PRIVATE
 )
 
 target_compile_options(PortableVideoAdapter PRIVATE -Wall)
-
-pico_enable_stdio_uart(PortableVideoAdapter 1)
-pico_enable_stdio_usb(PortableVideoAdapter 0)
 
 target_link_libraries(PortableVideoAdapter
         pico_stdlib
