@@ -240,7 +240,7 @@ void capture_frame_tft() {
         while (gpio_get(VIDEO_CLK) == 1) {
         }
 
-        frame_buffer[byte_index++] = read_parallel_byte();
+        frame_buffer[byte_index++] = ~read_parallel_byte();
 
         while (gpio_get(VIDEO_CLK) == 0);
     }
